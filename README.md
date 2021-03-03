@@ -1,42 +1,41 @@
 # Ricksy Business Project
+Ricksy Business FP Dual DAW Project, This Project is about to build a prototype of the application that When a guest arrives at the party, he / she is registered in the receptive system with his / her credit card.
+
+The receptive charges on the credit of the card:
+
+The cost of the UberOvni back home
+The cost of the welcome pack (Collaxion crystals).
 
 [![status application](https://img.shields.io/badge/status-stable-brightgreen)](URL_Proyecto)
 
 <!--Logos-->
 
-![Project Logo Java](https://github.com/MateoGarciaG/NombreProject/doc/img/java.png)
+![Project Logo Java](./doc/img/java.png)
 
-![Project Logo Maven](https://github.com/MateoGarciaG/NombreProject/doc/img/apache_maven.png)
+![Project Logo Maven](./doc/img/apache_maven.png)
 
-![Project Logo Borja Moll](https://github.com/MateoGarciaG/NombreProject/doc/img/logocifp.png)
+![Project Logo Borja Moll](./doc/img/logocifp.png)
 
 ## Tabla de Contenidos
 
 1. [Salida de la Aplicación](#salidas-de-la-aplicacion)
-1. [Historias de Usuario](#historias-de-usuario)
 1. [Diagrama UML](#diagrama-uml)
 1. [Tecnologías Usadas](#tecnologias-usadas)
+1. [Reflexiones](#reflexiones)
 1. [Licencia](#licencia)
 
 ---
 
 ## Salida de mi Aplicación
-![Project Salida Aplicacion](https://github.com/MateoGarciaG/NombreProject/doc/salida_aplicacion.png)
+![Project Salida Aplicacion](./doc/salida_consola.JPG)
 
 **[⬆ back to top](#tabla-de-contenidos)**
 
----
-
-## Historias de Usuario
-> Para ver el documento de las Historias de Usuario
-- [Historias de Usuario: ](https://github.com/MateoGarciaG/NombreProject/doc/historias_usuarios.pdf)
-
-**[⬆ back to top](#tabla-de-contenidos)**
 
 ---
 
 ## Diagrama UML
-![Project UML Diagram](https://github.com/MateoGarciaG/NombreProject/doc/UML_Diagram/uml_diagram_exam.png)
+![Project UML Diagram](./doc/diagrama_clases_UML.png)
 
 **[⬆ back to top](#tabla-de-contenidos)**
 
@@ -51,6 +50,16 @@
 
 
 **[⬆ back to top](#tabla-de-contenidos)**
+
+
+---
+
+## Reflexiones
+
+### Que has mejorado con este proyecto?
+
+**[⬆ back to top](#tabla-de-contenidos)**
+
 
 ---
 
@@ -71,15 +80,6 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
 
 
 **[⬆ back to top](#tabla-de-contenidos)**
