@@ -1,4 +1,4 @@
-package edu.pingpong.ricksybusiness;
+package edu.pingpong.ricksybusiness.domain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

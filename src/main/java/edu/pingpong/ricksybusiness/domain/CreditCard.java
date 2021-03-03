@@ -1,4 +1,4 @@
-package edu.pingpong.ricksybusiness;
+package edu.pingpong.ricksybusiness.domain;
 
 public class CreditCard {
 
