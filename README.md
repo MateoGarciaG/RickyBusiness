@@ -10,11 +10,11 @@ The cost of the welcome pack (Collaxion crystals).
 
 <!--Logos-->
 
-![Project Logo Java](./doc/img/java.png)
+![Project Logo Java](./DDD/img/java.png)
 
-![Project Logo Maven](./doc/img/apache_maven.png)
+![Project Logo Maven](./DDD/img/apache_maven.png)
 
-![Project Logo Borja Moll](./doc/img/logocifp.png)
+![Project Logo Borja Moll](./DDD/img/logocifp.png)
 
 ## Tabla de Contenidos
 
@@ -27,7 +27,7 @@ The cost of the welcome pack (Collaxion crystals).
 ---
 
 ## Salida de mi Aplicación
-![Project Salida Aplicacion](./doc/salida_consola.JPG)
+![Project Salida Aplicacion](./DDD/salida_consola.JPG)
 
 **[⬆ back to top](#tabla-de-contenidos)**
 
@@ -35,7 +35,7 @@ The cost of the welcome pack (Collaxion crystals).
 ---
 
 ## Diagrama UML
-![Project UML Diagram](./doc/diagrama_clases_UML.png)
+![Project UML Diagram](./DDD/diagrama_clases_UML.png)
 
 **[⬆ back to top](#tabla-de-contenidos)**
 
