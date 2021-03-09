@@ -1,6 +1,7 @@
 package edu.pingpong.ricksybusiness.domain;
 
 import java.util.*;
+import java.util.stream.*;
 
 public class UfosPark implements GuestDispatcher {
 
@@ -16,7 +17,8 @@ public class UfosPark implements GuestDispatcher {
     
     @Override
     public void dispatch(CreditCard creditCard) {
-        System.out.println("dispatched");
+        
+        flota.entrySet().stream().filter(e -> e.getValue() == null).map(entry -> {entry.setValue("54545454545"); return entry;}).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         
     }
 
@@ -27,7 +29,7 @@ public class UfosPark implements GuestDispatcher {
         return (ufo.isPresent()) ? ufo.get() : ufo.orElse("There is not Ufo for this CardNumber");
     }
 
-    
+
 
 
 }
