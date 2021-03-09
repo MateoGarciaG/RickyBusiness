@@ -8,7 +8,7 @@ import org.junit.*;
 
 public class UfosParkTest {
     
-    private GuestDispatcher ufosPark = null;
+    private UfosPark ufosPark = null;
     private CreditCard abradolph = null;
 
     @Before
@@ -31,14 +31,14 @@ public class UfosParkTest {
 
         this.ufosPark.dispatch(this.abradolph);
 
-        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.number());
+        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.getNumber());
 
     }
 
     @Test
     public void containsCardTest() {
 
-        assertEquals(true, this.ufosPark.containsCard(this.abradolph.number()));
+        assertEquals(true, this.ufosPark.containsCard(this.abradolph.getNumber()));
     }
 
 
