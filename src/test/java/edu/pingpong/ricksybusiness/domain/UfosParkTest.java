@@ -104,7 +104,7 @@ public class UfosParkTest {
 
         System.out.println(this.ufosPark.cardNumbers().toArray(cardNumbers));
 
-        // assertArrayEquals(new String[]{"4916119711304546", "8854545465766"}, this.ufosPark.cardNumbers().toArray(cardNumbers));
+        assertArrayEquals(new String[]{"4916119711304546", "8854545465766"}, this.ufosPark.cardNumbers().toArray(cardNumbers));
     }
 
 
