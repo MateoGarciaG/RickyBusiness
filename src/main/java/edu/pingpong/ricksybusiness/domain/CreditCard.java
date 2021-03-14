@@ -42,6 +42,6 @@ public class CreditCard {
     
     @Override
     public String toString() {
-        return "Owner: " + this.cardOwner() + "number: " + this.number() + "Credit: " + this.credit() + this.SYMBOL;
+        return "Owner: " + this.cardOwner() + "\nnumber: " + this.number() + "\nCredit: " + this.credit() + this.SYMBOL;
     }
 }
