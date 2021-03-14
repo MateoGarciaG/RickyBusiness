@@ -52,8 +52,8 @@ public class UfosPark implements GuestDispatcher {
 
     @Override
     public String toString() {
-        /* %n == \n */
-        return String.format("UFOS: %n %s", flota.keySet().toString());
+        /* %n != \n */
+        return String.format("UFOS: \n%s", flota.keySet().toString());
     }
 
 
