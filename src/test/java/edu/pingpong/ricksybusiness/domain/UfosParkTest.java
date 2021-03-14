@@ -32,37 +32,37 @@ public class UfosParkTest {
         /* Asignar un Ufo ha está tarjeta */
         this.ufosPark.dispatch(this.abradolph);
 
-        assertEquals(true, this.ufosPark.containsCard(this.abradolph.getNumber()));
+        assertEquals(true, this.ufosPark.containsCard(this.abradolph.number()));
 
         /* Asignar un Ufo a gearHead */
         CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
 
         this.ufosPark.dispatch(gearHead);
 
-        assertEquals(true, this.ufosPark.containsCard(gearHead.getNumber()));
+        assertEquals(true, this.ufosPark.containsCard(gearHead.number()));
     }
 
     @Test
     public void getUfoOfTest() {
 
-        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.getNumber()));
+        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.number()));
 
 
         CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
 
         /* No es el mismo número de la tarjeta, por lo cual no tiene ningún Ovni asignado*/
-        assertEquals("There is not Ufo for this CardNumber", this.ufosPark.getUfoOf(gearHead.getNumber()));
+        assertEquals("There is not Ufo for this CardNumber", this.ufosPark.getUfoOf(gearHead.number()));
 
         /* Intento de asignar otro Ovni a Abradolph, pero al ver que ya tiene uno, ignora la petición */
         this.ufosPark.dispatch(this.abradolph);
 
         /* Como abradolph ya está registrado, el Ufo sigue siendo el mismo */
-        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.getNumber()));
+        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.number()));
 
         /* Comprobar ahora con la CreditCard: gearHead */
         this.ufosPark.dispatch(gearHead);
 
-        assertEquals("dox", this.ufosPark.getUfoOf(gearHead.getNumber()));
+        assertEquals("dox", this.ufosPark.getUfoOf(gearHead.number()));
 
 
 
@@ -71,15 +71,15 @@ public class UfosParkTest {
     @Test
     public void containsCardTest() {
 
-        assertEquals(true, this.ufosPark.containsCard(this.abradolph.getNumber()));
+        assertEquals(true, this.ufosPark.containsCard(this.abradolph.number()));
 
         CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
 
-        assertEquals(false, this.ufosPark.containsCard(gearHead.getNumber()));
+        assertEquals(false, this.ufosPark.containsCard(gearHead.number()));
 
         this.ufosPark.dispatch(gearHead);
 
-        assertEquals(true, this.ufosPark.containsCard(gearHead.getNumber()));
+        assertEquals(true, this.ufosPark.containsCard(gearHead.number()));
     }
 
     @Test
