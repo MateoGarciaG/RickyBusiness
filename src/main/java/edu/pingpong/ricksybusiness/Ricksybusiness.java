@@ -105,27 +105,27 @@ public class Ricksybusiness
     //      * uno de ellos, que es de 50 EZIs
     //      */
 
-    //     CrystalExpender packExpender = new CrystalExpender(3, 50);
+        CrystalExpender packExpender = new CrystalExpender(3, 50);
 
-    //     // Muestra el total de packs y su precio unidad
-    //     System.out.println("\nPacks\n" + 
-    //                          "=====");
-    //     System.out.println(packExpender);
+        // Muestra el total de packs y su precio unidad
+        System.out.println("\nPacks\n" + 
+                             "=====");
+        System.out.println(packExpender);
 
-    //     // Abradolph compra su pack de bienvenida
-    //     packExpender.dispatch(abradolph);
+        // Abradolph compra su pack de bienvenida
+        packExpender.dispatch(abradolph);
 
-    //     System.out.println("\nAbradolph compra su pack\n" + 
-    //                          "========================");
-    //     System.out.println("Packs\n" + packExpender);
-    //     System.out.println("Credito de Abradolph: " + abradolph.credit());
+        System.out.println("\nAbradolph compra su pack\n" + 
+                             "========================");
+        System.out.println("Packs\n" + packExpender);
+        System.out.println("Credito de Abradolph: " + abradolph.credit());
 
-    //     // El pobre GerHead no tiene crédito para comprar su pack debido a que anteriormenrte ya le descontaron de su credito los 3000 que tenía
-    //     System.out.println("\nGearHead sin credito para su pack\n" + 
-    //                          "=================================");
-    //     packExpender.dispatch(gearHead);
-    //     System.out.println("Packs\n" + packExpender);
-    //     System.out.println("Credito de GearHead: " + gearHead.credit());
+        // El pobre GerHead no tiene crédito para comprar su pack debido a que anteriormenrte ya le descontaron de su credito los 3000 que tenía
+        System.out.println("\nGearHead sin credito para su pack\n" + 
+                             "=================================");
+        packExpender.dispatch(gearHead);
+        System.out.println("Packs\n" + packExpender);
+        System.out.println("Credito de GearHead: " + gearHead.credit());
 
 
     //     /**

@@ -41,15 +41,16 @@ public class CrystalExpenderTest {
         /* Le vacían la tarjeta de credito a gearHead, por lo cual ya no podría comprar otro pack */
         gearHead.pay(2950);
 
+        /* Intento de compar otro pack para gearHead pero al ver que no tiene más creditos, no puede comprarlo*/
         this.crystalExpender.dispatch(gearHead);
 
-        /* Debería mantenerse este ultimo pack*/
+        /* Debería mantenerse este ultimo pack del stock*/
         assertEquals(1, this.crystalExpender.stock());
     }
 
     @Test
     public void toStringTest() {
 
-        assertEquals("stock: 3 \n cost: 50.0", this.crystalExpender.toString());
+        assertEquals("stock: 3 \ncost: 50,0", this.crystalExpender.toString());
     }
 }
