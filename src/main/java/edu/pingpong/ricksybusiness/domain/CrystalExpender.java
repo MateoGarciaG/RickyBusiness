@@ -10,7 +10,6 @@ public class CrystalExpender implements GuestDispatcher{
         this.itemCost = itemCost;
     }
 
-
     @Override
     public void dispatch(CreditCard creditCard) {
         System.out.println("");
@@ -23,6 +22,6 @@ public class CrystalExpender implements GuestDispatcher{
 
     @Override
     public String toString() {
-        return String.format("%d %d", this.stock(), this.itemCost);
+        return String.format("stock: %d %n cost: %d", this.stock(), this.itemCost);
     }
 }

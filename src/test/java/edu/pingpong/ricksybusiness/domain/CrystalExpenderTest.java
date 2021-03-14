@@ -23,4 +23,33 @@ public class CrystalExpenderTest {
     public void constructorTest() {
         assertNotNull(this.crystalExpender);
     }
+
+    @Test
+    public void dispatcherTest() {
+
+        this.crystalExpender.dispatch(this.abradolph);
+
+        assertEquals(2, this.crystalExpender.stock());
+
+        /* Asignar un Pack a gearHead */
+        CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
+
+        this.crystalExpender.dispatch(gearHead);
+
+        assertEquals(1, this.crystalExpender.stock());
+
+        /* Le vacían la tarjeta de credito a gearHead, por lo cual ya no podría comprar otro pack */
+        gearHead.pay(2950);
+
+        this.crystalExpender.dispatch(gearHead);
+
+        /* Debería mantenerse este ultimo pack*/
+        assertEquals(1, this.crystalExpender.stock());
+    }
+
+    @Test
+    public void toStringTest() {
+
+        assertEquals("stock: 3 \n cost: 50.0", this.crystalExpender.toString());
+    }
 }
