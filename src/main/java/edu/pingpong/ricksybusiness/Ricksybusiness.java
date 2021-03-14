@@ -120,7 +120,7 @@ public class Ricksybusiness
     //     System.out.println("Packs\n" + packExpender);
     //     System.out.println("Credito de Abradolph: " + abradolph.credit());
 
-    //     // El pobre GerHead no tiene crédito para comprar su pack
+    //     // El pobre GerHead no tiene crédito para comprar su pack debido a que anteriormenrte ya le descontaron de su credito los 3000 que tenía
     //     System.out.println("\nGearHead sin credito para su pack\n" + 
     //                          "=================================");
     //     packExpender.dispatch(gearHead);
