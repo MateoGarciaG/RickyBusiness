@@ -30,9 +30,14 @@ public class CreditCard {
 
     public boolean pay(double quantity) {
 
+        boolean apto = true;
         this.credit -= quantity;
+        if(this.credit <= 0d) {
+            apto = false;
+            this.credit = 0d;
+        }
 
-        return (this.credit <= 0d) ? false : true;
+        return apto;
     }
     
     @Override

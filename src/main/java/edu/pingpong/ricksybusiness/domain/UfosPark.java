@@ -6,7 +6,7 @@ import java.util.stream.*;
 
 public class UfosPark implements GuestDispatcher {
 
-    private double fee = 0d;
+    private double fee = 500d;
     private final Map<String, String> flota = new HashMap<String, String>();
 
     
