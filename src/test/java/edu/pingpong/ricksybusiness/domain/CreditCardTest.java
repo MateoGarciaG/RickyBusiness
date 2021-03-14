@@ -32,7 +32,7 @@ public class CreditCardTest {
         assertEquals("Rick", this.card.getOwner());
     }
     @Test
-    public void getNumbeTestr() {
+    public void getNumberTest() {
 
         assertEquals("123456789", this.card.getNumber());
     }
@@ -41,6 +41,20 @@ public class CreditCardTest {
     public void getCreditTest() {
         /* al usar toString no es el toString() que usamos con polimorfismo
         sino de la clase Double, para convertir ese Double a un String*/
-        assertEquals("3000.0", this.card.getCredit().toString());
+        // assertEquals("3000.0", this.card.getCredit().toString());
+        assertEquals(3000.0d, this.card.getCredit(), 0);
     }
+
+    @Test
+    public void payTest() {
+
+        /* Aún tiene credito, ya que por defecto el credito que tiene una nueva tarjeta es de: 3000.0d, por lo cual: 3000.0 - 2000.0 = 1000.0 */
+
+        assertEquals(true, this.card.pay(2000));
+
+        /* Ya no tiene credito, ya que por defecto el credito que tiene una nueva tarjeta es de: 3000.0d, por lo cual: 1000.0 - 1000.0 = 0 */
+
+        assertEquals(false, this.card.pay(1000));
+    }
+
 }
