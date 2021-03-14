@@ -46,7 +46,7 @@ public class UfosParkTest {
     public void getUfoOfTest() {
 
         /* Asignar un Ufo ha está tarjeta */
-        /* Debido a que este método usa Stream(), se el asignará el ultimo Ufo de Map.Entry que no tenga aún no cardNumber asignado, y no desde el primero */
+        /* Debido a que este método usa Stream(), se el asignará el ultimo Ufo de Map.Entry que no tenga aún no cardNumber asignado, y no desdeº el primero */
         this.ufosPark.dispatch(this.abradolph);
 
         assertEquals("dox", this.ufosPark.getUfoOf(this.abradolph.number()));

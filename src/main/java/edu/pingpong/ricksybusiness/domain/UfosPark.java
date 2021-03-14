@@ -23,9 +23,11 @@ public class UfosPark implements GuestDispatcher {
     public void dispatch(CreditCard creditCard) {
         
         /* Al ser un Stream, el flujo de entrada de los elementos ya sea de una colección o mapa(Entry:llave, valor) son desde el ultimo agrego hasta el primero secuencialmente hasta llegar al primero */
-        this.flota.entrySet().stream().filter(e -> !this.flota.containsValue(creditCard.number()) && e.getValue() == null).findFirst().stream().map(entry -> {entry.setValue(creditCard.number()); creditCard.pay(fee); return entry;}).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        Optional<Map.Entry<String, String>> ufo = this.flota.entrySet().stream().filter(e -> !this.flota.containsValue(creditCard.number()) && e.getValue() == null).findFirst();
 
-        // creditCard.pay(fee);
+        if (ufo.isPresent()  && creditCard.pay(fee)) {
+            this.flota.put(ufo.get().getKey(), creditCard.number());
+        }
 
     }
 
