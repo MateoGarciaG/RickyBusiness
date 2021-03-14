@@ -10,13 +10,11 @@ public class UfosParkTest {
     
     private UfosPark ufosPark = null;
     private CreditCard abradolph = null;
-    private CreditCard gearHead;
 
     @Before
     public void setup() {
         this.ufosPark = new UfosPark();
         this.abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
-        this.gearHead = new CreditCard("Gearhead", "8888888888888888");
 
         // Da de alta en la flota de ovnis 2 UFOS.
         String[] ufosID = { "unx", "dox" };
@@ -29,14 +27,44 @@ public class UfosParkTest {
     }
 
     @Test
-    public void asignOvniTest() {
+    public void asignOvniTest() { 
 
+        /* Asignar un Ufo ha está tarjeta */
         this.ufosPark.dispatch(this.abradolph);
+
+        assertEquals(true, this.ufosPark.containsCard(this.abradolph.getNumber()));
+
+        /* Asignar un Ufo a gearHead */
+        CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
+
+        this.ufosPark.dispatch(gearHead);
+
+        assertEquals(true, this.ufosPark.containsCard(gearHead.getNumber()));
+    }
+
+    @Test
+    public void getUfoOfTest() {
 
         assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.getNumber()));
 
+
+        CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
+
         /* No es el mismo número de la tarjeta, por lo cual no tiene ningún Ovni asignado*/
-        assertEquals("There is not Ufo for this CardNumber", this.ufosPark.getUfoOf(this.gearHead.getNumber()));
+        assertEquals("There is not Ufo for this CardNumber", this.ufosPark.getUfoOf(gearHead.getNumber()));
+
+        /* Intento de asignar otro Ovni a Abradolph, pero al ver que ya tiene uno, ignora la petición */
+        this.ufosPark.dispatch(this.abradolph);
+
+        /* Como abradolph ya está registrado, el Ufo sigue siendo el mismo */
+        assertEquals("unx", this.ufosPark.getUfoOf(this.abradolph.getNumber()));
+
+        /* Comprobar ahora con la CreditCard: gearHead */
+        this.ufosPark.dispatch(gearHead);
+
+        assertEquals("dox", this.ufosPark.getUfoOf(gearHead.getNumber()));
+
+
 
     }
 
@@ -44,7 +72,33 @@ public class UfosParkTest {
     public void containsCardTest() {
 
         assertEquals(true, this.ufosPark.containsCard(this.abradolph.getNumber()));
+
+        CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
+
+        assertEquals(false, this.ufosPark.containsCard(gearHead.getNumber()));
+
+        this.ufosPark.dispatch(gearHead);
+
+        assertEquals(true, this.ufosPark.containsCard(gearHead.getNumber()));
     }
+
+    @Test
+    public void cardNumbers() {
+
+        CreditCard gearHead = new CreditCard("Gearhead", "8854545465766");
+
+        this.ufosPark.dispatch(gearHead);
+
+        /* Array con el tamaño de la Collection<String> para despues pasarlo por el parametro toArray() con el fin de asegurar el tipo de Dato que retornará el método toArray(), es decir, antes: Object[], despues: String[] */
+        String[] cardNumbers = new String[this.ufosPark.cardNumbers().size()];
+
+        assertEquals(2, this.ufosPark.cardNumbers().size());
+        assertArrayEquals(new String[]{"4916119711304546", "8854545465766"}, this.ufosPark.cardNumbers().toArray(cardNumbers));
+    }
+
+
+
+
 
 
 }
