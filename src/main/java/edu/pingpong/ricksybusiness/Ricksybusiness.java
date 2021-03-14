@@ -94,10 +94,9 @@ public class Ricksybusiness
         // Metemos un ovni más en la flota de ovnis
         // y mostramos la flota por consola
 
-        // System.out.println("\nFlota de ovnis\n" + 
-        //                      "==============");
-        // ufosPark.add("trex");
-        // System.out.println(ufosPark);
+        System.out.println("\nFlota de ovnis\n" + "==============");
+        ufosPark.add("trex");
+        System.out.println(ufosPark);
 
 
     //     /**
